@@ -1,12 +1,8 @@
 <div class="recipes-list-wrapper">
-  <mat-list class="recipes-list">
-    <mat-list-item *ngFor="let recipe of recipes" class="recipe-list-item">
-      <div class="recipe-list-item-inner">
-        <a
-          routerLink="/recipe/{{ recipe.id }}"
-          routerLinkActive="active"
-          class="recipe-name"
-          >{{ recipe.name }}</a
+    <mat-list class="recipes-list">
+        <mat-list-item *ngFor="let recipe of recipes" class="recipe-list-item">
+            <div class="recipe-list-item-inner">
+                <a routerLink="/recipe/{{ recipe._id }}" routerLinkActive="active" class="recipe-name">{{ recipe.name }}</a
         >
         <button
           mat-icon-button

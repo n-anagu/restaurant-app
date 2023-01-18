@@ -10,6 +10,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RecipesService } from './recipes.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [NavbarComponent, AuthorDialogComponent, RecipesListComponent],
@@ -23,7 +25,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     MatIconModule,
     RouterLink,
     RouterLinkActive,
+    HttpClientModule,
   ],
   exports: [NavbarComponent, RecipesListComponent],
+  providers: [RecipesService],
 })
 export class CoreModule {}
