@@ -1,0 +1,26 @@
+<div class="recipes-list-wrapper">
+  <mat-list class="recipes-list">
+    <mat-list-item *ngFor="let recipe of recipes" class="recipe-list-item">
+      <div class="recipe-list-item-inner">
+        <div class="recipe-name">{{ recipe.name }}</div>
+        <button
+          mat-icon-button
+          color="primary"
+          aria-label="edit the recipe"
+          class="recipe-action"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          color="accent"
+          aria-label="delete the recipe"
+          class="recipe-action"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </mat-list-item>
+  </mat-list>
+  <mat-divider [vertical]="true"></mat-divider>
+</div>

@@ -1,0 +1,27 @@
+.recipes-list-wrapper {
+    display: flex;
+}
+
+.recipes-list {
+    flex: 1;
+}
+
+.recipe-list-item:hover {
+    background-color: beige;
+    .recipe-action {
+        display: block;
+    }
+}
+
+.recipe-list-item-inner {
+    display: flex;
+    align-items: center;
+}
+
+.recipe-name {
+    flex: 1;
+}
+
+.recipe-action {
+    display: none;
+}

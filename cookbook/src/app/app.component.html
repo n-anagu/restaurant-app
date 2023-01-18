@@ -1,4 +1,5 @@
 <app-navbar></app-navbar>
-<main>
-    <router-outlet></router-outlet>
+<main class="main-wrapper">
+    <app-recipes-list class="recipes-list-column"></app-recipes-list>
+    <router-outlet class="recipe-column">recipe content</router-outlet>
 </main>

@@ -1,0 +1,15 @@
+@use "src/theme";
+.main-wrapper {
+    display: flex;
+    gap: theme.$margin-m;
+    margin-top: theme.$margin-m;
+}
+
+.recipes-list-column {
+    flex: 1;
+    max-width: 30rem;
+}
+
+.recipe-column {
+    flex: 2;
+}
