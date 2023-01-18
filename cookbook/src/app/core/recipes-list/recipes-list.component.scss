@@ -20,6 +20,13 @@
 
 .recipe-name {
     flex: 1;
+    &:active {
+        color: fuchsia;
+    }
+}
+
+.recipe-name.active {
+    color: fuchsia;
 }
 
 .recipe-action {

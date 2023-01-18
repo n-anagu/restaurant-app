@@ -9,6 +9,7 @@ import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @NgModule({
   declarations: [NavbarComponent, AuthorDialogComponent, RecipesListComponent],
@@ -20,6 +21,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatDividerModule,
     MatListModule,
     MatIconModule,
+    RouterLink,
+    RouterLinkActive,
   ],
   exports: [NavbarComponent, RecipesListComponent],
 })
