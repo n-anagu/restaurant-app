@@ -12,9 +12,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { RecipesService } from './recipes.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DeleteRecipeDialogComponent } from './recipes-list/delete-recipe-dialog/delete-recipe-dialog.component';
 
 @NgModule({
-  declarations: [NavbarComponent, AuthorDialogComponent, RecipesListComponent],
+  declarations: [NavbarComponent, AuthorDialogComponent, RecipesListComponent, DeleteRecipeDialogComponent],
   imports: [
     CommonModule,
     MatButtonModule,

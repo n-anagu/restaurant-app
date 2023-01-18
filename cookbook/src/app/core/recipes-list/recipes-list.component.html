@@ -17,6 +17,7 @@
           color="accent"
           aria-label="delete the recipe"
           class="recipe-action"
+          (click)="openDeleteRecipeDialog(recipe._id)"
         >
           <mat-icon>delete</mat-icon>
         </button>

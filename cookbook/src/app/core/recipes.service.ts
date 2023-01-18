@@ -19,4 +19,8 @@ export class RecipesService {
   getRecipe(id: string) {
     return this.http.get<Recipe>(`${this.apiUrl}${this.recipesResource}/${id}`);
   }
+
+  deleteRecipe(id: string) {
+    return this.http.delete(`${this.apiUrl}${this.recipesResource}/${id}`);
+  }
 }
