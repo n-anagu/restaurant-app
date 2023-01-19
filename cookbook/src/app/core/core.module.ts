@@ -13,9 +13,20 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { RecipesService } from './recipes.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DeleteRecipeDialogComponent } from './recipes-list/delete-recipe-dialog/delete-recipe-dialog.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FilterRecipesFormComponent } from './recipes-list/filter-recipes-form/filter-recipes-form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  declarations: [NavbarComponent, AuthorDialogComponent, RecipesListComponent, DeleteRecipeDialogComponent],
+  declarations: [
+    NavbarComponent,
+    AuthorDialogComponent,
+    RecipesListComponent,
+    DeleteRecipeDialogComponent,
+    FilterRecipesFormComponent,
+  ],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -27,6 +38,10 @@ import { DeleteRecipeDialogComponent } from './recipes-list/delete-recipe-dialog
     RouterLink,
     RouterLinkActive,
     HttpClientModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
   ],
   exports: [NavbarComponent, RecipesListComponent],
   providers: [RecipesService],

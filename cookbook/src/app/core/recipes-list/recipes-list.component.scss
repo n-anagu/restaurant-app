@@ -1,5 +1,11 @@
+@use "src/theme";
 .recipes-list-wrapper {
     display: flex;
+}
+
+.recipes-row {
+    flex-direction: row;
+    min-width: 30rem;
 }
 
 .recipes-list {
@@ -7,7 +13,7 @@
 }
 
 .recipe-list-item:hover {
-    background-color: beige;
+    background-color: whitesmoke;
     .recipe-action {
         display: block;
     }
@@ -20,13 +26,14 @@
 
 .recipe-name {
     flex: 1;
+    color: black;
     &:active {
-        color: fuchsia;
+        color: theme.$main-color;
     }
 }
 
 .recipe-name.active {
-    color: fuchsia;
+    color: theme.$main-color;
 }
 
 .recipe-action {

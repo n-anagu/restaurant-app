@@ -1,28 +1,41 @@
 <div class="recipes-list-wrapper">
-    <mat-list class="recipes-list">
-        <mat-list-item *ngFor="let recipe of recipes" class="recipe-list-item">
-            <div class="recipe-list-item-inner">
-                <a routerLink="/recipe/{{ recipe._id }}" routerLinkActive="active" class="recipe-name">{{ recipe.name }}</a
-        >
-        <button
-          mat-icon-button
-          color="primary"
-          aria-label="edit the recipe"
-          class="recipe-action"
-        >
-          <mat-icon>edit</mat-icon>
-        </button>
-        <button
-          mat-icon-button
-          color="accent"
-          aria-label="delete the recipe"
-          class="recipe-action"
-          (click)="openDeleteRecipeDialog(recipe._id)"
-        >
-          <mat-icon>delete</mat-icon>
-        </button>
-      </div>
-    </mat-list-item>
-  </mat-list>
+  <div class="recipes-row">
+    <app-filter-recipes-form
+      class="recipes-filter-form"
+      (filter)="onFilterRecipesList($event)"
+    ></app-filter-recipes-form>
+    <mat-nav-list class="recipes-list">
+      <mat-list-item
+        *ngFor="let recipe of filteredRecipes$ | async"
+        class="recipe-list-item"
+      >
+        <div class="recipe-list-item-inner">
+          <a
+            routerLink="/recipe/{{ recipe._id }}"
+            routerLinkActive="active"
+            class="recipe-name"
+            >{{ recipe.name }}</a
+          >
+          <button
+            mat-icon-button
+            color="primary"
+            aria-label="edit the recipe"
+            class="recipe-action"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            color="accent"
+            aria-label="delete the recipe"
+            class="recipe-action"
+            (click)="openDeleteRecipeDialog(recipe._id)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
   <mat-divider [vertical]="true"></mat-divider>
 </div>

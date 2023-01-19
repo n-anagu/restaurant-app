@@ -7,7 +7,7 @@ import { Recipe } from '../types';
 })
 export class RecipesService {
   private readonly apiUrl =
-    'https://crudcrud.com/api/4a3252283c7e40e398278d206238fb15';
+    'https://crudcrud.com/api/5202c6778f2148a9a28ccc22c19d2f9c';
   private readonly recipesResource = '/recipes';
 
   constructor(private http: HttpClient) {}
